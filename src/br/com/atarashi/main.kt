@@ -1,9 +1,14 @@
 package src.br.com.atarashi
 
 fun main() {
-    val assistiramCursoAndroid = listOf("Alex", "Fran", "Gui", "Maria")
-    val assistiramCursoKotlin = listOf("Alex", "Paulo", "Maria")
-    val assistiramAmbos = assistiramCursoKotlin + assistiramCursoAndroid
+    val assistiramCursoAndroid: Set<String> = setOf("Alex", "Fran", "Gui", "Maria")
+    val assistiramCursoKotlin: Set<String> = setOf("Alex", "Paulo", "Maria")
+    val assistiramAmbos = mutableSetOf<String>()
+
+    assistiramAmbos.addAll(assistiramCursoAndroid)
+    assistiramAmbos.addAll(assistiramCursoKotlin)
+    assistiramAmbos.add("Ana")
+    assistiramAmbos.add("Ana")
 
     println(assistiramAmbos.distinct())
 }
